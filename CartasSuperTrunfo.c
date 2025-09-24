@@ -25,8 +25,7 @@ printf ("OBS: O código deve ser a primeira letra do estado seguido de um númer
 scanf ("%s", Codigo1);
 
 printf ("Muito bem, agora escolha o nome da cidade para sua carta!: \n");
-fgets(Ncidade1, sizeof(Ncidade1), stdin);
-Ncidade1[strcspn(Ncidade1, "\n")] = '\0';
+scanf ("%s", Ncidade1);
 
 printf ("Agora informe a quantidade de habitantes do estado para sua carta!: \n");
 scanf ("%d", &Nhabitantes1);
@@ -53,8 +52,7 @@ printf ("OBS: O código deve ser a primeira letra do estado seguido de um númer
 scanf ("%s", Codigo2);
 
 printf ("Muito bem, agora escolha o nome da cidade para sua carta!: \n");
-fgets(Ncidade2, sizeof(Ncidade2), stdin);
-Ncidade2[strcspn(Ncidade2, "\n")] = '\0'; 
+scanf ("%s", Ncidade2);
 
 printf ("Agora informe a quantidade de habitantes do estado para sua carta!: \n");
 scanf ("%d", &Nhabitantes2);
