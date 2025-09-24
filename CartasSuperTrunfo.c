@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
 
@@ -24,8 +25,11 @@ printf ("Agora escolha um código para sua carta!: \n");
 printf ("OBS: O código deve ser a primeira letra do estado seguido de um número de 01 a 04 (ex: A01, B02, C03) \n");
 scanf ("%s", Codigo1);
 
+while(getchar() != '\n');
+
 printf ("Muito bem, agora escolha o nome da cidade para sua carta!: \n");
-scanf ("%s", Ncidade1);
+fgets(Ncidade1, sizeof(Ncidade1), stdin);
+Ncidade1[strcspn(Ncidade1, "\n")] = '\0';
 
 printf ("Agora informe a quantidade de habitantes do estado para sua carta!: \n");
 scanf ("%d", &Nhabitantes1);
@@ -51,8 +55,11 @@ printf ("Agora escolha um código para sua carta!: \n");
 printf ("OBS: O código deve ser a primeira letra do estado seguido de um número de 01 a 04 (ex: A01, B02, C03) \n");
 scanf ("%s", Codigo2);
 
+while(getchar() != '\n');  
+
 printf ("Muito bem, agora escolha o nome da cidade para sua carta!: \n");
-scanf ("%s", Ncidade2);
+fgets(Ncidade2, sizeof(Ncidade2), stdin);
+Ncidade2[strcspn(Ncidade2, "\n")] = '\0';
 
 printf ("Agora informe a quantidade de habitantes do estado para sua carta!: \n");
 scanf ("%d", &Nhabitantes2);
