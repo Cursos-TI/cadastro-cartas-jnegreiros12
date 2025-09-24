@@ -2,10 +2,8 @@
 
 int main() {
 
-char Nestado1[1];
-char Nestado2[1];
-char Codigo1[3];
-char Codigo2[3];
+char Nestado1[2], Nestado2[2];
+char Codigo1[4], Codigo2[4];
 char Ncidade1[170];
 char Ncidade2[170];
 int Nhabitantes1, Nhabitantes2;
@@ -27,7 +25,8 @@ printf ("OBS: O código deve ser a primeira letra do estado seguido de um númer
 scanf ("%s", Codigo1);
 
 printf ("Muito bem, agora escolha o nome da cidade para sua carta!: \n");
-scanf ("%s", Ncidade1);
+fgets(Ncidade1, sizeof(Ncidade1), stdin);
+Ncidade1[strcspn(Ncidade1, "\n")] = '\0';
 
 printf ("Agora informe a quantidade de habitantes do estado para sua carta!: \n");
 scanf ("%d", &Nhabitantes1);
@@ -41,7 +40,7 @@ scanf ("%f", &Pib1);
 printf ("Agora escolha a pontuação turística do estado de sua carta (de 0 a 100): \n");
 scanf ("%d", &PTuristico1);
 
-printf ("Parabéns, sua primeira carta foi criada com sucesso, agora vamos criar a segunda!: \n")
+printf ("Parabéns, sua primeira carta foi criada com sucesso, agora vamos criar a segunda!: \n");
 
 // CRIAÇÃO SEGUNDA CARTA
 
@@ -54,7 +53,8 @@ printf ("OBS: O código deve ser a primeira letra do estado seguido de um númer
 scanf ("%s", Codigo2);
 
 printf ("Muito bem, agora escolha o nome da cidade para sua carta!: \n");
-scanf ("%s", Ncidade2);
+fgets(Ncidade2, sizeof(Ncidade2), stdin);
+Ncidade2[strcspn(Ncidade2, "\n")] = '\0'; 
 
 printf ("Agora informe a quantidade de habitantes do estado para sua carta!: \n");
 scanf ("%d", &Nhabitantes2);
@@ -68,7 +68,7 @@ scanf ("%f", &Pib2);
 printf ("Agora escolha a pontuação turística do estado de sua carta (de 0 a 100): \n");
 scanf ("%d", &PTuristico2);
 
-printf ("Parabéns, a criação de suas cartas foram concluídas com sucesso! \n")
+printf ("Parabéns, a criação de suas cartas foram concluídas com sucesso! \n");
 
 printf ("Carta1 : \n");
 printf ("Estado: %s \n", Nestado1);
