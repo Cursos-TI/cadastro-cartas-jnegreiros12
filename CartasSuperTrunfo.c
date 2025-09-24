@@ -11,6 +11,8 @@ int Nhabitantes1, Nhabitantes2;
 float Km1, Km2;
 float Pib1, Pib2;
 int PTuristico1, PTuristico2;
+float DP1, DP2;
+float PibPC1, PibPC2;
 
 printf ("Bem vindo ao Super Trunfo! \n");
 printf ("Cadastre suas cartas para jogar! \n");
@@ -87,6 +89,12 @@ printf ("PIB: R$ %.2f \n", Pib1);
 
 printf ("Pontos Turísticos: %d \n", PTuristico1);
 
+DP1 = (float) Nhabitantes1 / Km1;
+printf ("Densidade Populacional: %.2f Hab/Km² \n", DP1);
+
+PibPC1 = (float) Pib1 / Nhabitantes1;
+printf ("PIB per capita: R$ %.2f \n", PibPC1);
+
 printf ("Carta2 : \n");
 printf ("Estado: %s \n", Nestado2);
 printf ("Código: %s \n", Codigo2);
@@ -98,6 +106,12 @@ printf ("Área: %.2f km² \n", Km2);
 printf ("PIB: R$ %.2f \n", Pib2);
 
 printf ("Pontos Turísticos: %d \n", PTuristico2);
+
+DP2 = (float) Nhabitantes2 / Km2;
+printf ("Densidade Populacional: %.2f Hab/Km² \n", DP2);
+
+PibPC2 = (float) Pib2 / Nhabitantes2;
+printf ("PIB per capita: R$ %.2f \n", PibPC2);
 
 return 0;
 }
